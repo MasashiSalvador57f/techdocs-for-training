@@ -260,7 +260,7 @@ git checkout $topic            # ワークツリーをtopicブランチに変更
 git branch $topic $branch-name # $branch-nameのブランチから$topicという名前のブランチを作成
 git checkout -b $topic         # 現在のブランチからtopicというブランチを作ってcheckout
 git branch -d $topic           # ブランチの削除(1)
-git vbranh -D $topic           # ブランチの削除(2)
+git branch -D $topic           # ブランチの削除(2)
 git branch --merged $commit-hach # commit-hashがマージされているブランチ一覧を取得
 ```
 
@@ -297,17 +297,18 @@ git blame $file # fileのどの行を誰が変更したか調査する
 git checkout $file # fileをHEADの状態に戻す git checkout HEAD $fileと同じ
 git revert $commit-hash $file # fileの状態を$commit-hashまで戻す
 git reset $commit-hash # インデックスに乗っているファイルを$commit-hashまで戻す
-git reset --hard $commit-hash # リポジトリ/インデックス/ワークツリーを$commit-hashまで戻す
+git reset --hard $commit-hash # リポジトリ/インデックス/ワークツリーを$commit-hashまで戻す(要するに全部戻る)
 git revert $commit-hash # $commit-hashのコミットを打ち消すコミット作る
 ```
 
 ### push  / pull
 
 ```
+git push -u origin topic # origin/topicをトラッキングブランチとしてpush
 git push origin topic # topicブランチをリモートにpush
 git pull origin topic # リモートのトピックブランチとリモートトラッキングブランチを同期したあと、topicブランチをローカルブランチにマージ
 git pull              # ローカルブランチと同名のブランチをpull
-git fetch             # リモートブランチとリモートトラッキングブランチを同期
+git fetch             # リモートブランチとリモートトラッキングブランチを同期a
 ```
 
 ### 一般的な禁じ手(危険度高い)

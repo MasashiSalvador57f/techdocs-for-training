@@ -21,7 +21,7 @@ NOTE:適宜cpなどは使って良い。ただし、なるべくgitコマンド�
 NOTE:XさんはCSSやHTMLを色々と編集する作業をしている途中でした。  
 
 + 上記において、git pullで誤ったブランチをpullしてしまった場合、それをpushするとどのような危険性がありますか？  
-<NOTE>:Fast-Forwardなpullである場合を考えてください。  
+NOTE:Fast-Forwardなpullである場合を考えてください。  
 
 ## 調べれば良い問題
 
